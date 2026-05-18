@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barberia El Arcacas</title>
+    <link rel="stylesheet" type="text/css" href="Estilos/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Oswald:wght@400;600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- CABECERA -->
+    <header>
+        <h1>Barberia El Arcacas</h1>
+        <p>Cortes que parecen milagros</p>
+    </header>
+
+    <!-- NAVEGACION -->
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#horarios">Horarios</a>
+        <a href="#reserva">Reservar</a>
+        <a href="#valoracion">Valoración</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <!-- INICIO -->
+    <section id="inicio">
+        <h2>Bienvenidos a nuestra Barbería</h2>
+        <p>Somos una barbería con años de experiencia dedicados al arte del cuidado masculino. Combinamos técnicas tradicionales con un servicio de primera para asegurar que cada cliente luzca su mejor versión. Nuestro compromiso es brindarte precisión, estilo y una atención personalizada en cada visita.</p>
+    </section>
+
+    <!-- CATALOGO -->
+    <section id="catalogo">
+        <h2>Nuestro Catálogo</h2>
+        <div class="catalogo_place">
+            <article class="cortes">
+                <img src="Imagenes/mid_fade.png" alt="Corte Mid Fade">
+                <h3>Mid Fade</h3>
+                <p>Un degradado medio clásico que se adapta a cualquier tipo de rostro, ideal para un look limpio y profesional.</p>
+                <p class="precio">S/. 25</p>
+            </article>
+            <article class="cortes">
+                <img src="Imagenes/buzz_cut.png" alt="Corte Buzz Cut">
+                <h3>Buzz Cut</h3>
+                <p>Corte muy bajo y uniforme con máquina. Perfecto para quienes buscan comodidad y un estilo minimalista.</p>
+                <p class="precio">S/. 15</p>
+            </article>
+            <article class="cortes">
+                <img src="Imagenes/Pompadour.png" alt="Corte Pompadour">
+                <h3>Pompadour</h3>
+                <p>Peinado con volumen en la parte superior y laterales cortos, ideal para un estilo elegante y retro.</p>
+                <p class="precio">S/. 35</p>
+            </article>
+            <article class="cortes">
+                <img src="Imagenes/French Crop.png" alt="Corte French Crop">
+                <h3>French Crop</h3>
+                <p>Corte con flequillo corto hacia adelante y un degradado alto. Muy fácil de peinar y mantener.</p>
+                <p class="precio">S/. 25</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- HORARIOS -->
+    <section id="horarios">
+        <h2>Horarios de Atención</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Día</th>
+                    <th>Horario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Lunes a Viernes</td>
+                    <td>12:00 - 20:00</td>
+                </tr>
+                <tr>
+                    <td>Sábado</td>
+                    <td>12:00 - 22:00</td>
+                </tr>
+                <tr>
+                    <td>Domingo</td>
+                    <td>Cerrado</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- RESERVA -->
+    <section id="reserva">
+        <h2>Hacer una Cita</h2>
+        <form action="/reservar" method="POST">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Su nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="persona@gmail.com" required>
+
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <label for="hora">Hora:</label>
+            <select id="hora" name="hora">
+                <option value="12:00">12:00 PM</option>
+                <option value="13:00">1:00 PM</option>
+                <option value="14:00">2:00 PM</option>
+                <option value="19:00">7:00 PM</option>
+                <option value="20:00">8:00 PM</option>
+            </select>
+
+            <button type="submit" class="btn-reserva">Confirmar Cita</button>
+        </form>
+    </section>
+
+    <!-- VALORACION -->
+    <section id="valoracion">
+        <h2>¿Qué te pareció nuestro servicio?</h2>
+        <div class="estrellas">
+            <input type="radio" name="estrella" id="v-5" value="5">
+            <label for="v-5">★</label>
+            <input type="radio" name="estrella" id="v-4" value="4">
+            <label for="v-4">★</label>
+            <input type="radio" name="estrella" id="v-3" value="3">
+            <label for="v-3">★</label>
+            <input type="radio" name="estrella" id="v-2" value="2">
+            <label for="v-2">★</label>
+            <input type="radio" name="estrella" id="v-1" value="1">
+            <label for="v-1">★</label>
+        </div>
+        <p>¡Tu opinión nos ayuda a mejorar!</p>
+    </section>
+
+    <!-- CONTACTO -->
+    <footer id="contacto">
+        <p><strong class="footer-nombre">Barberia El Arcacas</strong></p>
+        <p>Av. Los Martirez, Tinguiña, Ica - Perú</p>
+        <br>
+        <p>
+            <a href="mailto:barbers@elsaborperuano.pe">barbers@elsaborperuano.pe</a>
+            &nbsp;|&nbsp;
+            <a href="tel:+51979886797">+51 979 886 797</a>
+        </p>
+        <br>
+        <address>
+            <small>&copy; 2026 Barberia El Arcacas. Todos los derechos reservados.</small>
+        </address>
+    </footer>
+
+</body>
+</html>
