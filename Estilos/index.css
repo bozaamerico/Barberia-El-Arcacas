@@ -11,7 +11,6 @@ body {
     line-height: 1.6;
 }
 
-/* ── HEADER ── */
 header {
     background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
                 url(../Imagenes/fondo_barberia.png) center/cover no-repeat;
@@ -41,7 +40,6 @@ header p {
     margin-top: 8px;
 }
 
-/* ── NAV ── */
 nav {
     background-color: #1a1a1a;
     position: sticky;
@@ -91,7 +89,6 @@ section h2 {
     margin-right: auto;
 }
 
-/* ── INICIO ── */
 #inicio p {
     max-width: 700px;
     margin: 0 auto;
@@ -100,7 +97,6 @@ section h2 {
     color: #ccc;
 }
 
-/* ── CATÁLOGO ── */
 .catalogo_place {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -152,7 +148,6 @@ section h2 {
     margin-top: 10px;
 }
 
-/* ── HORARIOS ── */
 table {
     width: 100%;
     max-width: 500px;
@@ -179,7 +174,6 @@ tr:nth-child(even) td {
     background: #1e1e1e;
 }
 
-/* ── FORMULARIO ── */
 form {
     max-width: 480px;
     margin: 0 auto;
@@ -232,7 +226,6 @@ select:focus {
     background: #a00000;
 }
 
-/* ── VALORACIÓN ── */
 #valoracion p {
     color: #aaa;
     margin-top: 6px;
@@ -264,7 +257,6 @@ select:focus {
     color: #ffc107;
 }
 
-/* ── CONTACTO (página separada) ── */
 .contacto_datos {
     max-width: 500px;
     margin: 0 auto;
@@ -286,7 +278,6 @@ select:focus {
     color: #c5a059;
 }
 
-/* ── FOOTER ── */
 footer {
     background: #1a1a1a;
     color: #aaa;
@@ -315,4 +306,138 @@ footer a:hover {
 footer address {
     font-style: normal;
     margin-top: 6px;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        height: 300px;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 48px;
+        letter-spacing: 2px;
+    }
+
+    header p {
+        font-size: 1.1rem;
+    }
+
+    nav {
+        padding: 0.5rem;
+    }
+
+    nav a {
+        padding: 8px 12px;
+        font-size: 0.8em;
+        letter-spacing: 1px;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+
+    section h2 {
+        font-size: 1.6rem;
+        max-width: 100%;
+    }
+
+    .catalogo_place {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    form {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    header {
+        height: 260px;
+        padding: 16px;
+    }
+
+    header h1 {
+        font-size: 32px;
+        letter-spacing: 1px;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2px;
+        padding: 6px 4px;
+    }
+
+    nav a {
+        padding: 7px 10px;
+        font-size: 0.75em;
+        letter-spacing: 0.5px;
+    }
+
+    section {
+        padding: 30px 16px;
+    }
+
+    section h2 {
+        font-size: 1.4rem;
+    }
+
+    .catalogo_place {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .cortes img {
+        height: 160px;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    th, td {
+        padding: 8px 6px;
+    }
+
+    form {
+        padding: 0;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 0.95em;
+    }
+
+    .btn-reserva {
+        font-size: 1em;
+        padding: 12px 20px;
+    }
+
+    .estrellas {
+        font-size: 36px;
+    }
+
+    footer {
+        padding: 24px 16px;
+        font-size: 0.9rem;
+    }
+
+    .contacto_datos {
+        font-size: 0.95rem;
+        padding: 0 10px;
+    }
 }
